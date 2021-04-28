@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import EqualSlicesPackage
 
 class ViewController: UIViewController {
 
@@ -26,12 +27,7 @@ class ViewController: UIViewController {
         let testNotEnoughSlices = equalSlices(totalSlices: 11, recipients: 5, perRecipientSlices: 3)
         print("testNotEnoughSlices: \(testNotEnoughSlices)")
         
-        
         let testExactAmountOfSlices = equalSlices(totalSlices: 24, recipients: 12, perRecipientSlices: 2)
         print("testExactAmountOfSlices: \(testExactAmountOfSlices)")
-
     }
-
-
 }
-

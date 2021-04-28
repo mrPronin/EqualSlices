@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,7 +14,7 @@
 		3E2D99292638B32A00F8F6D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E2D99282638B32A00F8F6D7 /* Assets.xcassets */; };
 		3E2D992C2638B32A00F8F6D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E2D992A2638B32A00F8F6D7 /* LaunchScreen.storyboard */; };
 		3E2D99372638B32A00F8F6D7 /* SPMTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2D99362638B32A00F8F6D7 /* SPMTestTests.swift */; };
-		3E2D99512638B39900F8F6D7 /* EqualSlices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2D99502638B39900F8F6D7 /* EqualSlices.swift */; };
+		3E43B7F8263A02270077B99A /* EqualSlicesPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 3E43B7F7263A02270077B99A /* EqualSlicesPackage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +39,6 @@
 		3E2D99322638B32A00F8F6D7 /* EqualSlicesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EqualSlicesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E2D99362638B32A00F8F6D7 /* SPMTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPMTestTests.swift; sourceTree = "<group>"; };
 		3E2D99382638B32A00F8F6D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3E2D99502638B39900F8F6D7 /* EqualSlices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EqualSlices.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E43B7F8263A02270077B99A /* EqualSlicesPackage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,7 +84,6 @@
 				3E2D991F2638B32900F8F6D7 /* AppDelegate.swift */,
 				3E2D99212638B32900F8F6D7 /* SceneDelegate.swift */,
 				3E2D99232638B32900F8F6D7 /* ViewController.swift */,
-				3E2D994F2638B37D00F8F6D7 /* Utilities */,
 				3E2D99252638B32900F8F6D7 /* Main.storyboard */,
 				3E2D99282638B32A00F8F6D7 /* Assets.xcassets */,
 				3E2D992A2638B32A00F8F6D7 /* LaunchScreen.storyboard */,
@@ -102,14 +101,6 @@
 			path = EqualSlicesTests;
 			sourceTree = "<group>";
 		};
-		3E2D994F2638B37D00F8F6D7 /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				3E2D99502638B39900F8F6D7 /* EqualSlices.swift */,
-			);
-			path = Utilities;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -117,6 +108,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3E2D99462638B32A00F8F6D7 /* Build configuration list for PBXNativeTarget "EqualSlices" */;
 			buildPhases = (
+				3E43B7FC263A0A740077B99A /* Swiftlint */,
 				3E2D99182638B32900F8F6D7 /* Sources */,
 				3E2D99192638B32900F8F6D7 /* Frameworks */,
 				3E2D991A2638B32900F8F6D7 /* Resources */,
@@ -126,6 +118,9 @@
 			dependencies = (
 			);
 			name = EqualSlices;
+			packageProductDependencies = (
+				3E43B7F7263A02270077B99A /* EqualSlicesPackage */,
+			);
 			productName = SPMTest;
 			productReference = 3E2D991C2638B32900F8F6D7 /* EqualSlices.app */;
 			productType = "com.apple.product-type.application";
@@ -175,6 +170,9 @@
 				Base,
 			);
 			mainGroup = 3E2D99132638B32900F8F6D7;
+			packageReferences = (
+				3E43B7F6263A02270077B99A /* XCRemoteSwiftPackageReference "EqualSlicesPackage" */,
+			);
 			productRefGroup = 3E2D991D2638B32900F8F6D7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -205,6 +203,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3E43B7FC263A0A740077B99A /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3E2D99182638B32900F8F6D7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -213,7 +232,6 @@
 				3E2D99242638B32900F8F6D7 /* ViewController.swift in Sources */,
 				3E2D99202638B32900F8F6D7 /* AppDelegate.swift in Sources */,
 				3E2D99222638B32900F8F6D7 /* SceneDelegate.swift in Sources */,
-				3E2D99512638B39900F8F6D7 /* EqualSlices.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,6 +502,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3E43B7F6263A02270077B99A /* XCRemoteSwiftPackageReference "EqualSlicesPackage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mrPronin/EqualSlicesPackage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3E43B7F7263A02270077B99A /* EqualSlicesPackage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3E43B7F6263A02270077B99A /* XCRemoteSwiftPackageReference "EqualSlicesPackage" */;
+			productName = EqualSlicesPackage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3E2D99142638B32900F8F6D7 /* Project object */;
 }
