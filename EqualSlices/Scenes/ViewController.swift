@@ -9,7 +9,6 @@ import UIKit
 import EqualSlicesPackage
 
 class ViewController: UIViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
         let testTotalSlicesIsZero = equalSlices(totalSlices: 0, recipients: 1, perRecipientSlices: 1)

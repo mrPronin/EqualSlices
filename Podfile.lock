@@ -1,0 +1,20 @@
+PODS:
+  - ChainLayout (0.2.0)
+  - Then (2.7.0)
+
+DEPENDENCIES:
+  - ChainLayout
+  - Then
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - ChainLayout
+    - Then
+
+SPEC CHECKSUMS:
+  ChainLayout: 36a3f76fba47ccc510a0fe3f9e67aab9b27371ef
+  Then: acfe0be7e98221c6204e12f8161459606d5d822d
+
+PODFILE CHECKSUM: 4c03b919274e13a33f366171b543d194e5422922
+
+COCOAPODS: 1.10.1
