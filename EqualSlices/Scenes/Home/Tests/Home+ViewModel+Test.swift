@@ -11,7 +11,7 @@ import Combine
 
 class HomeViewModelTest: XCTestCase {
     var sut: HomeViewModel!
-    var subsciptions: Set<AnyCancellable>!
+    var subsciptions = Set<AnyCancellable>()
     
     override func setUp() {
         super.setUp()
@@ -22,7 +22,7 @@ class HomeViewModelTest: XCTestCase {
     override func tearDown() {
         super.tearDown()
         sut = nil
-        subsciptions = nil
+        subsciptions = []
     }
     
     func testTotalSlicesIsZero() {
